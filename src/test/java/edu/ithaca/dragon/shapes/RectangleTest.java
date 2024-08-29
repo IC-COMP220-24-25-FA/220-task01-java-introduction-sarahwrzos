@@ -21,5 +21,11 @@ public class RectangleTest {
         assertEquals(4, myRectangle.length, .00001);
         assertEquals(8, myRectangle.width, .00001);
     }
+    @Test
+    public void longestLineWithinRTest(){
+        Rectangle myRectangle = new Rectangle(3,4);
+        double line = myRectangle.longestLineWithin();
+        assertEquals(5, line, .0001);
+    }
 
 }
