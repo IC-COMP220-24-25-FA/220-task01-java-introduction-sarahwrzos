@@ -28,7 +28,12 @@ public class CircleTest {
         myCircle = new Circle(0.001);
         assertEquals(0.00000314159, myCircle.calcArea(), 0.0000000001);
     }
-
+    @Test
+    public void doubleSizeTest(){
+        Circle myCircle = new Circle(5);
+        myCircle.doubleSize();
+        assertEquals(10, myCircle.radius,0);
+    }
     @Test
     public void TestConstructorError(){
         assertThrows(IllegalArgumentException.class, () -> new Circle(0));
