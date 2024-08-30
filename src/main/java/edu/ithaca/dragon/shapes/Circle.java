@@ -28,6 +28,6 @@ public class Circle {
      * @return the longest straight line that can be drawn within this circle
      */
     public double longestLineWithin(){
-        return radius;
+        return radius*2;
     }
 }
