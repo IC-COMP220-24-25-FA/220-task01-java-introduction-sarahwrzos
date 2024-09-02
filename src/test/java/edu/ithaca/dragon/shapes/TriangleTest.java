@@ -17,8 +17,9 @@ public class TriangleTest {
     }
     @Test
     public void doubleSizeTest(){
-        Triangle myTriangle = new Triangle(2,4);
-        assertEquals(4, myTriangle.base, .0001);
+        Triangle myTriangle = new Triangle(3,4);
+        myTriangle.doubleSize();
+        assertEquals(6, myTriangle.base, .0001);
         assertEquals(8, myTriangle.height, .0001);
     }
     @Test
