@@ -50,5 +50,13 @@ public class FunctionPracticeTest {
         List <Integer> emptyList = new ArrayList<Integer>();
         assertEquals(-1, FunctionPractice.findFirstLargest(emptyList));
     }
+
+    @Test
+    public void findLastLargestTest(){
+        List <Integer> myList = List.of(50, 2, 1, 40, 50);
+        assertEquals(4, FunctionPractice.findLastLargest(myList));
+        List <Integer> emptyList = new ArrayList<Integer>();
+        assertEquals(-1, FunctionPractice.findLastLargest(emptyList));
+    }
     
 }
