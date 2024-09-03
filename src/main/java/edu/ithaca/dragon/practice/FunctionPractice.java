@@ -9,21 +9,49 @@ public class FunctionPractice {
      * @throws IllegalArgumentException if any of the numbers is negative
      */
     public static int largestOfThree(int first, int second, int third){
-        throw new RuntimeException("Not Implemented");
+        if (first < 0 || second < 0 || third < 0){
+            throw new IllegalArgumentException("numbers have to be positive");
+        }
+        int larger = -1;
+        if (first > larger){
+            larger = first;
+        }
+        if (second > larger){larger = second;}
+        if (third > larger){larger = third;}
+        return larger;
     }
     
     /**
      * @return the final price at register of the given item after discount and tax applied
      */
     public static double calcSalePrice(double originalPrice, double discountPercent, double salesTax){
-        throw new RuntimeException("Not Implemented");
+        if (originalPrice < 0){throw new IllegalArgumentException("price cannot be negative");}
+        if (discountPercent > 1 || discountPercent < 0){throw new IllegalArgumentException("discount percent has to be between 0 and 1 (inclusive)");}
+        if (salesTax > 1 || salesTax < 0){throw new IllegalArgumentException("sales tax has to be between 0 and 1 (inclusive)");}
+        return (originalPrice*(1-discountPercent))*(1+salesTax);
+
+
     }
 
     /**
      * @return true if the data collected shows the dog is good, false if bad dog today
      */
     public static boolean isGoodDog(int yearsOld, int daysSinceShoesChewed, boolean fetchedThePaperToday){
-        throw new RuntimeException("Not Implemented");
+        if (yearsOld < 0 || daysSinceShoesChewed < 0){
+            throw new IllegalArgumentException("input cannot be negative");
+        }
+        if (daysSinceShoesChewed>1 && fetchedThePaperToday == true){
+            return true;
+        }
+        else if(daysSinceShoesChewed == 1 || daysSinceShoesChewed == 0){
+            return false;
+        }
+        else if (fetchedThePaperToday == false){
+            return false;
+        }
+        else{
+            return false;
+        }
     }
 
     /**
