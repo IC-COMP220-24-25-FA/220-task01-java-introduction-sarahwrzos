@@ -100,7 +100,27 @@ public class FunctionPractice {
      * @throws illegalargumentexception if char is not found 
      */
     public static String findFirstMostOccurencesOfLetter(List<String> words, char letter){
-        throw new RuntimeException("Not Implemented");
+        int count = 0;
+        int index = -1;
+        for (int i = 0; i < words.size(); i++){
+            int tempCount = 0;
+            for (int j = 0; j < words.get(i).length(); j++){
+                if (words.get(i).charAt(j) == letter){
+                    tempCount++;
+                }
+            }
+            if (tempCount > count){
+                count = tempCount; 
+                index = i; 
+            }
+
+        }
+        if (count != 0){
+            return words.get(index);
+        }
+        else{
+            throw new IllegalArgumentException("Character not found in list");
+        }
     }
 
 
