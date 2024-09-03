@@ -6,6 +6,10 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import org.junit.jupiter.api.Test;
 
 public class FunctionPracticeTest {
@@ -41,7 +45,10 @@ public class FunctionPracticeTest {
 
     @Test
     public void findFirstLargestTest(){
-        
+        List <Integer> myList = List.of(50, 2, 1, 40, 50);
+        assertEquals(0, FunctionPractice.findFirstLargest(myList));
+        List <Integer> emptyList = new ArrayList<Integer>();
+        assertEquals(-1, FunctionPractice.findFirstLargest(emptyList));
     }
     
 }
