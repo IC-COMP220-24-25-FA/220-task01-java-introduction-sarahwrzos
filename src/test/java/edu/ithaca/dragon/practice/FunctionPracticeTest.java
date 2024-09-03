@@ -12,19 +12,36 @@ public class FunctionPracticeTest {
 
     @Test
     public void largestOfThreeTest(){
-        assertEquals(5, FunctionPractice.largestOfThree(4, 5, 2));
+        assertEquals(5, FunctionPractice.largestOfThree(4, 5, 2)); //tests when largest number is in position 1,2,or3
         assertEquals(5, FunctionPractice.largestOfThree(5, 4, 2));
         assertEquals(5, FunctionPractice.largestOfThree(4, 2, 5));
-        assertEquals(5, FunctionPractice.largestOfThree(5, 5, 5));
+        assertEquals(5, FunctionPractice.largestOfThree(5, 5, 5));//tests if they are all the same number
 
-        assertThrows(IllegalArgumentException.class, () -> FunctionPractice.largestOfThree(-1, -1, -1));
+        assertThrows(IllegalArgumentException.class, () -> FunctionPractice.largestOfThree(-1, -1, -1)); //tests the error raised if a negative number is inputted
         assertThrows(IllegalArgumentException.class, () -> FunctionPractice.largestOfThree(5, -1, 3));
         assertThrows(IllegalArgumentException.class, () -> FunctionPractice.largestOfThree(5, 3, -1));
     }
 
     @Test
     public void calcSalePriceTest(){
-        fail("Not implemented yet");
+        assertEquals(7.56, FunctionPractice.calcSalePrice(10, .3, .08), .0001);
+        assertThrows(IllegalArgumentException.class, () -> FunctionPractice.calcSalePrice(-1,-.5,-.08)); 
+        assertThrows(IllegalArgumentException.class, () -> FunctionPractice.calcSalePrice(10,3,1.5)); 
+        assertThrows(IllegalArgumentException.class, () -> FunctionPractice.calcSalePrice(10,20,.08)); 
+    }
+
+    @Test
+    public void isGoodDogTest(){
+        assertEquals(true, FunctionPractice.isGoodDog(2,2,true));
+        assertEquals(false, FunctionPractice.isGoodDog(2,1,true));
+        assertEquals(false, FunctionPractice.isGoodDog(2,2,false));
+        assertEquals(false, FunctionPractice.isGoodDog(2,1,false));
+        assertThrows(IllegalArgumentException.class, () -> FunctionPractice.isGoodDog(2,-1,true)); 
+    }
+
+    @Test
+    public void findFirstLargestTest(){
+        
     }
     
 }

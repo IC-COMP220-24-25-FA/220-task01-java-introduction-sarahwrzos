@@ -22,53 +22,65 @@ public class ShapeMain {
         Rectangle rectangle4 = new Rectangle(list.get(6), list.get(7));
         Rectangle rectangle5 = new Rectangle(list.get(8), list.get(9));
         System.out.println("1: " + rectangle1);
+        System.out.println("Area: " + rectangle1.calcArea());
+        System.out.println("Longest Line: " + rectangle1.longestLineWithin());
         System.out.println("2: " + rectangle2);
+        System.out.println("Area: " + rectangle2.calcArea());
+        System.out.println("Longest Line: " + rectangle2.longestLineWithin());
         System.out.println("3: " + rectangle3);
+        System.out.println("Area: " + rectangle3.calcArea());
+        System.out.println("Longest Line: " + rectangle3.longestLineWithin());
         System.out.println("4: " + rectangle4);
+        System.out.println("Area: " + rectangle4.calcArea());
+        System.out.println("Longest Line: " + rectangle4.longestLineWithin());
         System.out.println("5: " + rectangle5);
+        System.out.println("Area: " + rectangle5.calcArea());
+        System.out.println("Longest Line: " + rectangle5.longestLineWithin());
 Scanner myObj = new Scanner(System.in);
 System.out.println("Enter the number of the rectangle you would like to use: ");
-String response = myObj.nextLine();
+int response;
+response = myObj.nextInt();
+System.out.println("you chose "+ response);
 // String response = "6";
 // Scanner myObj = new Scanner(System.in);
-// while (!response.equals("1") &&  !response.equals("2") &&!response.equals("3") &&!response.equals("4") &&!response.equals("5") ){
+// while ( response != 1 && response != 2 && response != 3 && response != 4 && response !=5 ){
     
 //     System.out.println("Enter the number of the rectangle you would like to use");
 //     if (myObj.hasNextLine()) {
 //         response = myObj.nextLine().trim();
-//     if (!response.equals("1") &&  !response.equals("2") &&!response.equals("3") &&!response.equals("4") &&!response.equals("5") ){
+//     if ( response != 1 && response != 2 && response != 3 && response != 4 && response !=5 ){
 //         System.out.println("Try again. Enter a number 1 through 5");
 //     }
 //     }
 // }
-        if (response == "1"){
-            double longest = rectangle1.longestLineWithin();
-            System.out.println("Longest line is " + longest);
+        if (response == 1){
             rectangle1.doubleSize();
+            double longest = rectangle1.longestLineWithin();
+            System.out.println("New Longest line is " + longest);
             System.out.println("dimensions after doubling: " + rectangle1);
         }
-        if (response == "2"){
-            double longest = rectangle2.longestLineWithin();
-            System.out.println("Longest line is " + longest);
+        if (response == 2){
             rectangle2.doubleSize();
+            double longest = rectangle2.longestLineWithin();
+            System.out.println("New Longest line is " + longest);
             System.out.println("dimensions after doubling: " + rectangle2);
         }
-        if (response == "3"){
-            double longest = rectangle3.longestLineWithin();
-            System.out.println("Longest line is " + longest);
+        if (response == 3){
             rectangle3.doubleSize();
+            double longest = rectangle3.longestLineWithin();
+            System.out.println(" New Longest line is " + longest);
             System.out.println("dimensions after doubling: " + rectangle3);
         }
-        if (response == "4"){
-            double longest = rectangle4.longestLineWithin();
-            System.out.println("Longest line is " + longest);
+        if (response == 4){
             rectangle4.doubleSize();
+            double longest = rectangle4.longestLineWithin();
+            System.out.println("New Longest line is " + longest);
             System.out.println("dimensions after doubling: " + rectangle4);
         }
-        if (response == "1"){
-            double longest = rectangle5.longestLineWithin();
-            System.out.println("Longest line is " + longest);
+        if (response == 5){
             rectangle5.doubleSize();
+            double longest = rectangle5.longestLineWithin();
+            System.out.println("New Longest line is " + longest);
             System.out.println("dimensions after doubling: " + rectangle5);
 
         }
