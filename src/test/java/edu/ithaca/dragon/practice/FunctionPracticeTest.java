@@ -58,5 +58,13 @@ public class FunctionPracticeTest {
         List <Integer> emptyList = new ArrayList<Integer>();
         assertEquals(-1, FunctionPractice.findLastLargest(emptyList));
     }
+
+    @Test
+    public void findFirstMostOccurencesOfLetterTest(){
+        List <String> myList = List.of ("this", "is", "a", "sentence", "with", "stuff");
+        assertEquals("this", FunctionPractice.findFirstMostOccurencesOfLetter(myList, 's'));
+        assertThrows(IllegalArgumentException.class, () -> FunctionPractice.findFirstMostOccurencesOfLetter(myList, 'x')); 
+
+    }
     
 }
