@@ -21,5 +21,7 @@ public class Rectangle {
     public double longestLineWithin(){
         return java.lang.Math.sqrt(length*length+width*width);
     }
-    
+    public String toString(){
+        return ""+ length +" x "+ width;
+    }
 }
