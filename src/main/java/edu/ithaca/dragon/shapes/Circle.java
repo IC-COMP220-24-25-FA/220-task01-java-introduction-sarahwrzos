@@ -1,6 +1,7 @@
 package edu.ithaca.dragon.shapes;
 
-public class Circle {
+public class Circle implements Shape{ //circle is a shape (added implements Shape)
+    //if youre going to be a shape, you need a calcArea method myShape.calcArea();
     double radius;
 
     /**

@@ -6,7 +6,22 @@ import java.util.Scanner;
 
 
 public class ShapeMain {
-    
+    public static int runScanner(){
+        Scanner myObj = new Scanner(System.in);
+        int response;
+        //System.out.println(myObj);
+        System.out.println("Enter the number of the rectangle you would like to use: ");
+        int x = myObj.nextInt();
+        System.out.println(x);
+        if(myObj.hasNextInt()){
+            response = myObj.nextInt();
+        }
+        else{System.out.println(myObj.hasNext());}
+        
+        myObj.close();
+        return x;
+    }
+
     public static void main(String[] args){
         //Make a list of 5 randomly-sized rectangles and print their area and the largest line that can be drawn through them
         //Allow the user to choose one, double the size of that one, and print them all again
@@ -36,11 +51,7 @@ public class ShapeMain {
         System.out.println("5: " + rectangle5);
         System.out.println("Area: " + rectangle5.calcArea());
         System.out.println("Longest Line: " + rectangle5.longestLineWithin());
-Scanner myObj = new Scanner(System.in);
-System.out.println("Enter the number of the rectangle you would like to use: ");
-int response;
-response = myObj.nextInt();
-System.out.println("you chose "+ response);
+        int response = ShapeMain.runScanner();
 // String response = "6";
 // Scanner myObj = new Scanner(System.in);
 // while ( response != 1 && response != 2 && response != 3 && response != 4 && response !=5 ){
@@ -85,7 +96,6 @@ System.out.println("you chose "+ response);
 
         }
         System.out.println("-----------------------------------------------");
-        myObj.close();
     }
 }
 }
