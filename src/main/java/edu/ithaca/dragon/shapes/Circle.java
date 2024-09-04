@@ -1,13 +1,17 @@
 package edu.ithaca.dragon.shapes;
 
-public class Circle {
+public class Circle implements Shape{ //circle is a shape (added implements Shape)
+    //if youre going to be a shape, you need a calcArea method myShape.calcArea();
     double radius;
 
     /**
      * @throws IllegalArgumentException if radius is not a positive number
      */
-    public Circle(double radius){
-        this.radius = radius;
+    public Circle(double radius){ //change to radiusIn
+        if (radius <= 0){
+            throw new IllegalArgumentException("radius cannot be zero or less");
+        }
+        this.radius = radius; //change to radius = radiusIn;
     }
 
     /**
